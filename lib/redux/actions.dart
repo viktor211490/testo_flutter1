@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_thunk/redux_thunk.dart';
 import 'package:testo/generated_code/testo_api.swagger.dart';
@@ -30,11 +31,20 @@ ThunkAction loadImageThunkAction = (Store store) async {
 };
 
 Future<Widget> _loadImage(String url) async {
+  List<Card> cardList = [];
   final testoApi =
       TestoApi.create(baseUrl: Uri.parse('https://admin.testo-dubna.ru'));
   RestaurantCodeGenDto gg = new RestaurantCodeGenDto();
-  await testoApi.apiRestaurantGet().then((value) => gg = value.body!.first);
-  await Future.delayed(Duration(seconds: 3));
-  print(gg.name);
-  return Image.network(url);
+  var restaurants = await testoApi.apiRestaurantGet();
+  if(restaurants.body != null){
+    restaurants.body?.forEach((element) {
+      cardList.add(const Card(
+        child: Text(data),
+      ));
+    });
+  }
+
+  return Column(
+    children: cardList,
+  );
 }
