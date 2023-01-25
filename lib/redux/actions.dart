@@ -34,16 +34,19 @@ Future<Widget> _loadImage(String url) async {
   List<Card> cardList = [];
   final testoApi =
       TestoApi.create(baseUrl: Uri.parse('https://admin.testo-dubna.ru'));
-  RestaurantCodeGenDto gg = new RestaurantCodeGenDto();
-  var restaurants = await testoApi.apiRestaurantGet();
-  if(restaurants.body != null){
-    restaurants.body?.forEach((element) {
-      cardList.add(const Card(
-        child: Text(data),
-      ));
-    });
-  }
-
+  testoApi
+      .apiAuthRequestCodePost(
+          body: RequestCodeCommand(phoneNumber: "+79969419868"))
+      .then((value) => {
+            print(value.body),
+          });
+  await testoApi.apiRestaurantGet().then((value) => {
+        value.body!.forEach((element) {
+          cardList.add(Card(
+            child: Text(element.name!),
+          ));
+        })
+      });
   return Column(
     children: cardList,
   );
