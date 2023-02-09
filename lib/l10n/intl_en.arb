@@ -1,4 +1,8 @@
 {
-  "app_bar_title": "Auth en",
+  "profile_app_bar_title": "Profile",
+  "promo_app_bar_title": "Promos",
+  "menu_app_bar_title": "Menu",
+  "orders_app_bar_title": "Orders",
+  "cart_app_bar_title": "Cart",
   "main_title": "Main title"
 }

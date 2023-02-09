@@ -50,11 +50,51 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Auth en`
-  String get app_bar_title {
+  /// `Profile`
+  String get profile_app_bar_title {
     return Intl.message(
-      'Auth en',
-      name: 'app_bar_title',
+      'Profile',
+      name: 'profile_app_bar_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Promos`
+  String get promo_app_bar_title {
+    return Intl.message(
+      'Promos',
+      name: 'promo_app_bar_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Menu`
+  String get menu_app_bar_title {
+    return Intl.message(
+      'Menu',
+      name: 'menu_app_bar_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Orders`
+  String get orders_app_bar_title {
+    return Intl.message(
+      'Orders',
+      name: 'orders_app_bar_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get cart_app_bar_title {
+    return Intl.message(
+      'Cart',
+      name: 'cart_app_bar_title',
       desc: '',
       args: [],
     );

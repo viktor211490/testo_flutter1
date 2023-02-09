@@ -22,7 +22,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "app_bar_title": MessageLookupByLibrary.simpleMessage("Auth ru"),
-        "main_title": MessageLookupByLibrary.simpleMessage("Main title")
+        "cart_app_bar_title": MessageLookupByLibrary.simpleMessage("Корзина"),
+        "main_title": MessageLookupByLibrary.simpleMessage("Main title"),
+        "menu_app_bar_title": MessageLookupByLibrary.simpleMessage("Меню"),
+        "orders_app_bar_title": MessageLookupByLibrary.simpleMessage("Заказы"),
+        "profile_app_bar_title":
+            MessageLookupByLibrary.simpleMessage("Профиль"),
+        "promo_app_bar_title": MessageLookupByLibrary.simpleMessage("Акции")
       };
 }

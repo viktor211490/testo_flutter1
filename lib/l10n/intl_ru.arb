@@ -1,4 +1,8 @@
 {
-  "app_bar_title": "Auth ru",
+  "profile_app_bar_title": "Профиль",
+  "promo_app_bar_title": "Акции",
+  "menu_app_bar_title": "Меню",
+  "orders_app_bar_title": "Заказы",
+  "cart_app_bar_title": "Корзина",
   "main_title": "Main title"
 }
